@@ -92,9 +92,11 @@ chmod 400 ~/.ssh/<my_key_name>.pem
 
 <aside>
 ‼️ If this step doesn’t work, try:
+    
 - typing out the commands above rather than copy-pasting
 - replacing ∼ in the above with the path of your home directory, so either
-something like `/Users/your_username` or `${HOME}` - you can find it if you type cd
+something like `/Users/your_username` or `${HOME}` 
+- you can find it if you type cd
 (with nothing afterwards) and then `pwd`
 
 </aside>
