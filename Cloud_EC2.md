@@ -90,7 +90,6 @@ chmod 400 ~/.ssh/<my_key_name>.pem
 
 (More info on permissions [here](https://linuxize.com/post/chmod-command-in-linux/)).
 
-<aside>
 ‼️ If this step doesn’t work, try:
     
 - typing out the commands above rather than copy-pasting
@@ -99,7 +98,6 @@ something like `/Users/your_username` or `${HOME}`
 - you can find it if you type cd
 (with nothing afterwards) and then `pwd`
 
-</aside>
 
 - connect into the server via ssh:
 
@@ -108,6 +106,8 @@ ssh -i ~/.ssh/<my_key_name>.pem <user_name>@<hostname>
 ```
 
 The `<user_name>` is ubuntu and the `<hostname>` the **Public IPv4 address** or **Public IPv4 DNS** from the EC2 page (see above).
+[Here](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/managing-users.html#:~:text=The%20default%20user%20name%20for,is%20centos%20or%20ec2%2Duser%20.) you can find a list of default `<user_name>` for the different Linux instances (for other OS check on the respective guides).
+
 You shoud get something similar to:
 
 ![Screenshot 2024-05-24 at 12.09.36.png](Snapshots/Screenshot_2024-05-24_at_12.09.36.png)
@@ -201,9 +201,9 @@ Where:
     - **`3.120.246.208`**: The public IP address of the remote EC2 instance.
     - **`~/`**: The destination path on the remote machine. The **`~`** represents the home directory of the **`ubuntu`** user on the remote machine.
 
-<aside>
+
 ✅ If everythings goes well you should get `**Exit status 0**` in the terminal!
-</aside>
+
 
 
 - if you want to save locally the file you’ve created in the cloud, use the same command, just inverting the position of the second and the third argument:
@@ -213,3 +213,5 @@ Where:
 ```
 
 ---
+
+!!! **ATTENTION**: after you have done with your work, don't forget to Stop and then Terminate your instance by right-click on the instance ID, else you might be charged!
